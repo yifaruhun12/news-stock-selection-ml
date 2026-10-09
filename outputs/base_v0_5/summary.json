@@ -1,0 +1,120 @@
+{
+  "strategy": "Base v0.5",
+  "status": "completed",
+  "rules": {
+    "signal": "EventSurprise >= 2.0",
+    "entry": "next trading-day open",
+    "take_profit": 0.15,
+    "stop_loss": 0.08,
+    "exit_trigger": "trading-day close",
+    "exit": "next tradable trading-day open",
+    "max_position_weight": 0.1,
+    "max_industry_weight": null
+  },
+  "data_audit": {
+    "signal_rows": 2913,
+    "candidate_tickers": 1889,
+    "market_rows": 1500558,
+    "invalid_ohlc_rows": 1467,
+    "usable_ohlc_coverage": 0.9990223636807107
+  },
+  "summary": {
+    "oos_start": "2023-01-03T00:00:00",
+    "oos_end": "2025-04-15T00:00:00",
+    "observations": 551,
+    "entry_trades": 370,
+    "realized_trades": 362,
+    "take_profit_exits": 145,
+    "stop_loss_exits": 217,
+    "realized_trade_win_rate": 0.40331491712707185,
+    "completed_trade_win_rate": 0.40331491712707185,
+    "average_completed_holding_trading_days": 21.60220994475138,
+    "average_cash_weight": 0.01303803271912914,
+    "annualized_turnover": 22.96006543036277,
+    "annualized_arithmetic_trading_cost": 0.004598794314725908,
+    "information_ratio": 1.3194445571461055,
+    "strategy_cumulative_return": 0.5521955529201259,
+    "strategy_annualized_return": 0.22272672308262043,
+    "strategy_annualized_volatility": 0.26767146379758294,
+    "strategy_sharpe": 0.8856895433792447,
+    "strategy_max_drawdown": -0.4298814822324283,
+    "gross_cumulative_return": 0.5678075653718062,
+    "gross_annualized_return": 0.22833604160385068,
+    "gross_annualized_volatility": 0.2677484956000415,
+    "gross_sharpe": 0.9026105275387538,
+    "gross_max_drawdown": -0.4278178325663209,
+    "benchmark_cumulative_return": -0.032955342105051355,
+    "benchmark_annualized_return": -0.015209236548069716,
+    "benchmark_annualized_volatility": 0.18896524143584462,
+    "benchmark_sharpe": 0.01286693187807124,
+    "benchmark_max_drawdown": -0.2613227820789241,
+    "signal_rows_after_filter": 2060
+  },
+  "yearly": [
+    {
+      "year": 2023,
+      "strategy_return": -0.10335571603352967,
+      "benchmark_return": -0.10373211026018059,
+      "maximum_drawdown": -0.2366291945193676
+    },
+    {
+      "year": 2024,
+      "strategy_return": 0.5933538106965275,
+      "benchmark_return": 0.12202815371631504,
+      "maximum_drawdown": -0.271975804035557
+    },
+    {
+      "year": 2025,
+      "strategy_return": 0.08646071453583781,
+      "benchmark_return": -0.0383767868030257,
+      "maximum_drawdown": -0.16484656544587029
+    }
+  ],
+  "validation": {
+    "signal_key_duplicates": 0,
+    "recomputed_cumulative_return": 0.5521955529201259,
+    "cumulative_return_matches_summary": true,
+    "recomputed_realized_trade_win_rate": 0.40331491712707185,
+    "win_rate_matches_summary": true,
+    "expected_report_metrics": {
+      "strategy_annualized_return": {
+        "expected": 0.22272672308262043,
+        "actual": 0.22272672308262043,
+        "match": true
+      },
+      "strategy_cumulative_return": {
+        "expected": 0.5521955529201259,
+        "actual": 0.5521955529201259,
+        "match": true
+      },
+      "strategy_sharpe": {
+        "expected": 0.8856895433792447,
+        "actual": 0.8856895433792447,
+        "match": true
+      },
+      "strategy_max_drawdown": {
+        "expected": -0.4298814822324283,
+        "actual": -0.4298814822324283,
+        "match": true
+      },
+      "realized_trade_win_rate": {
+        "expected": 0.40331491712707185,
+        "actual": 0.40331491712707185,
+        "match": true
+      },
+      "entry_trades": {
+        "expected": 370,
+        "actual": 370,
+        "match": true
+      },
+      "all_expected_metrics_match": true
+    },
+    "all_checks_pass": true
+  },
+  "artifacts": {
+    "daily_returns": "outputs\\base_v0_5\\daily_returns.csv",
+    "trades": "outputs\\base_v0_5\\trades.csv",
+    "open_positions": "outputs\\base_v0_5\\open_positions.csv",
+    "signals": "outputs\\base_v0_5\\signals.csv"
+  }
+}

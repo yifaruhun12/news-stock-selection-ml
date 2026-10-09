@@ -1,0 +1,231 @@
+{
+  "strategy": "Logistic L2 + 30% industry entry cap",
+  "status": "completed",
+  "rules": {
+    "signal": "EventSurprise >= 2.0",
+    "model": "L2 Logistic Regression",
+    "training": "annual expanding walk-forward",
+    "test_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "retention_fraction": 0.5,
+    "entry": "next trading-day open",
+    "take_profit": 0.25,
+    "stop_loss": 0.1,
+    "exit": "intraday OHLC trigger",
+    "max_position_weight": 0.1,
+    "max_industry_weight": 0.3
+  },
+  "features": [
+    "stock_score",
+    "log_news_count",
+    "log_event_count",
+    "strength_component",
+    "event_component",
+    "novelty_component",
+    "credibility_component",
+    "confidence_component",
+    "mean_impact",
+    "mean_novelty",
+    "mean_credibility",
+    "mean_confidence",
+    "score_rank_pct",
+    "pre_5d_excess_return",
+    "pre_20d_excess_return",
+    "short_long_excess_gap",
+    "event_density",
+    "event_z",
+    "price_expectation_z",
+    "event_expectation_interaction",
+    "industry_pre_5d_excess_return",
+    "industry_pre_20d_excess_return",
+    "stock_minus_industry_pre_5d_excess",
+    "stock_minus_industry_pre_20d_excess",
+    "industry_pre_5d_excess_z",
+    "industry_pre_20d_excess_z",
+    "industry_surprise_score",
+    "industry_price_available",
+    "industry_mapping_proxy",
+    "industry_known",
+    "industry_category_00",
+    "industry_category_01",
+    "industry_category_02",
+    "industry_category_03",
+    "industry_category_04",
+    "industry_category_05",
+    "industry_category_06",
+    "industry_category_07",
+    "industry_category_08",
+    "industry_category_09",
+    "industry_category_10",
+    "industry_category_11",
+    "industry_category_12",
+    "industry_category_13",
+    "industry_category_14",
+    "industry_category_15",
+    "industry_category_16",
+    "industry_category_17",
+    "industry_category_18",
+    "industry_category_19",
+    "industry_category_20",
+    "industry_category_21",
+    "industry_category_22",
+    "industry_category_23",
+    "industry_category_24",
+    "industry_category_25"
+  ],
+  "data_audit": {
+    "signal_rows": 2913,
+    "candidate_tickers": 1889,
+    "market_rows": 1500558,
+    "invalid_ohlc_rows": 1467,
+    "usable_ohlc_coverage": 0.9990223636807107
+  },
+  "summary": {
+    "oos_start": "2023-01-03T00:00:00",
+    "oos_end": "2025-04-15T00:00:00",
+    "observations": 551,
+    "entry_trades": 254,
+    "realized_trades": 244,
+    "take_profit_exits": 80,
+    "stop_loss_exits": 164,
+    "realized_trade_win_rate": 0.32786885245901637,
+    "completed_trade_win_rate": 0.32786885245901637,
+    "average_completed_holding_trading_days": 29.549180327868854,
+    "average_cash_weight": 0.051138054878364175,
+    "annualized_turnover": 8.716718062063489,
+    "annualized_arithmetic_trading_cost": 0.0017444982177285023,
+    "information_ratio": 0.9895260994919318,
+    "strategy_cumulative_return": 0.3579305192171971,
+    "strategy_annualized_return": 0.15019528579175723,
+    "strategy_annualized_volatility": 0.23454165296850102,
+    "strategy_sharpe": 0.7135623886480632,
+    "strategy_max_drawdown": -0.21477697945738672,
+    "gross_cumulative_return": 0.36310734541959033,
+    "gross_annualized_return": 0.1521986411276417,
+    "gross_annualized_volatility": 0.2345574060936902,
+    "gross_sharpe": 0.7209518691550121,
+    "gross_max_drawdown": -0.21444575388606424,
+    "benchmark_cumulative_return": -0.032955342105051355,
+    "benchmark_annualized_return": -0.015209236548069716,
+    "benchmark_annualized_volatility": 0.18896524143584462,
+    "benchmark_sharpe": 0.01286693187807124,
+    "benchmark_max_drawdown": -0.2613227820789241,
+    "maximum_industry_entry_weight": 0.30535118324502575,
+    "maximum_observed_industry_weight": 0.30528355624343423,
+    "maximum_industry_weight_after_new_order": 0.3,
+    "industry_cap_violation_count": 0
+  },
+  "yearly": [
+    {
+      "year": 2023,
+      "strategy_return": 0.12251162474507482,
+      "benchmark_return": -0.10373211026018059,
+      "maximum_drawdown": -0.13120622495684653
+    },
+    {
+      "year": 2024,
+      "strategy_return": 0.1325935753457974,
+      "benchmark_return": 0.12202815371631504,
+      "maximum_drawdown": -0.19485928243034512
+    },
+    {
+      "year": 2025,
+      "strategy_return": 0.06810170443521035,
+      "benchmark_return": -0.0383767868030257,
+      "maximum_drawdown": -0.1193096662094687
+    }
+  ],
+  "validation": {
+    "feature_count": 56,
+    "folds": [
+      {
+        "test_year": 2023,
+        "train_rows": 752,
+        "test_rows": 810,
+        "selection_threshold": 0.1884572892046261,
+        "selected_rows": 361,
+        "train_signal_end": "2022-12-21T00:00:00",
+        "train_label_end": "2022-12-29T00:00:00",
+        "no_signal_date_leakage": true,
+        "no_label_availability_leakage": true
+      },
+      {
+        "test_year": 2024,
+        "train_rows": 1446,
+        "test_rows": 1057,
+        "selection_threshold": 0.2170766359877001,
+        "selected_rows": 685,
+        "train_signal_end": "2023-12-18T00:00:00",
+        "train_label_end": "2023-12-29T00:00:00",
+        "no_signal_date_leakage": true,
+        "no_label_availability_leakage": true
+      },
+      {
+        "test_year": 2025,
+        "train_rows": 2590,
+        "test_rows": 193,
+        "selection_threshold": 0.2523912681608309,
+        "selected_rows": 132,
+        "train_signal_end": "2024-12-25T00:00:00",
+        "train_label_end": "2024-12-31T00:00:00",
+        "no_signal_date_leakage": true,
+        "no_label_availability_leakage": true
+      }
+    ],
+    "oos_auc": 0.5469252201664683,
+    "prediction_key_duplicates": 0,
+    "all_folds_no_signal_date_leakage": true,
+    "all_folds_no_label_availability_leakage": true,
+    "selected_signal_rows": 1178,
+    "recomputed_cumulative_return": 0.3579305192171971,
+    "cumulative_return_matches_summary": true,
+    "recomputed_realized_trade_win_rate": 0.32786885245901637,
+    "win_rate_matches_summary": true,
+    "industry_cap_respected": true,
+    "expected_report_metrics": {
+      "strategy_annualized_return": {
+        "expected": 0.15019528579175723,
+        "actual": 0.15019528579175723,
+        "match": true
+      },
+      "strategy_cumulative_return": {
+        "expected": 0.3579305192171971,
+        "actual": 0.3579305192171971,
+        "match": true
+      },
+      "strategy_sharpe": {
+        "expected": 0.7135623886480632,
+        "actual": 0.7135623886480632,
+        "match": true
+      },
+      "strategy_max_drawdown": {
+        "expected": -0.21477697945738672,
+        "actual": -0.21477697945738672,
+        "match": true
+      },
+      "realized_trade_win_rate": {
+        "expected": 0.32786885245901637,
+        "actual": 0.32786885245901637,
+        "match": true
+      },
+      "entry_trades": {
+        "expected": 254,
+        "actual": 254,
+        "match": true
+      },
+      "all_expected_metrics_match": true
+    },
+    "all_checks_pass": true
+  },
+  "artifacts": {
+    "predictions": "outputs\\logistic_l2_industry_cap_30pct\\predictions.csv",
+    "coefficients": "outputs\\logistic_l2_industry_cap_30pct\\coefficients.csv",
+    "selected_signals": "outputs\\logistic_l2_industry_cap_30pct\\selected_signals.csv",
+    "daily_returns": "outputs\\logistic_l2_industry_cap_30pct\\daily_returns.csv",
+    "trades": "outputs\\logistic_l2_industry_cap_30pct\\trades.csv",
+    "open_positions": "outputs\\logistic_l2_industry_cap_30pct\\open_positions.csv"
+  }
+}

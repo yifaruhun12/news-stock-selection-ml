@@ -1,0 +1,6 @@
+file,source_artifact,rows,bytes,date_start,date_end,sha256
+signals_event_surprise.csv,work/expectation_gap_v0_3/event_surprise/signals_with_returns.csv,2913,108873,2021-12-29,2025-04-08,9add1819c01c3b39ca1f9513ec626ebef773e87e0bed12c2a1668377667226f3
+market_prices.csv,work/expectation_gap_v0_3/market_prices.csv,1500558,57695021,2021-12-01,2025-04-15,bf5876d015691018dd0ddda5851b2f911d9189c61fe8c62fb8733e19909b7765
+intraday_extremes.csv,work/expectation_gap_intraday_ohlc_v0_9/intraday_extremes.csv,1500558,45170628,2021-12-01,2025-04-15,e44e211ba33cb260ad087278f42f5b12b5c43ae0f022e9e710938ec2c504d9a7
+benchmark_csi800.csv,work/expectation_gap_v0_3/benchmark.csv,852,18681,2021-10-12,2025-04-15,755929380ba607c3a2bf7068d67eb2977bcbe08e6e1a0df92ef298ffbb264bd8
+logistic_industry_feature_dataset.csv,work/expectation_gap_ml_industry_v2_1/industry_feature_dataset.csv,2913,2246616,2021-12-29,2025-04-08,1dfdab1ad34f11371d4cc643c245091ed4cc210341e7afd280afac202dfb6f34

@@ -1,0 +1,82 @@
+{
+  "feature_count": 56,
+  "folds": [
+    {
+      "test_year": 2023,
+      "train_rows": 752,
+      "test_rows": 810,
+      "selection_threshold": 0.1884572892046261,
+      "selected_rows": 361,
+      "train_signal_end": "2022-12-21T00:00:00",
+      "train_label_end": "2022-12-29T00:00:00",
+      "no_signal_date_leakage": true,
+      "no_label_availability_leakage": true
+    },
+    {
+      "test_year": 2024,
+      "train_rows": 1446,
+      "test_rows": 1057,
+      "selection_threshold": 0.2170766359877001,
+      "selected_rows": 685,
+      "train_signal_end": "2023-12-18T00:00:00",
+      "train_label_end": "2023-12-29T00:00:00",
+      "no_signal_date_leakage": true,
+      "no_label_availability_leakage": true
+    },
+    {
+      "test_year": 2025,
+      "train_rows": 2590,
+      "test_rows": 193,
+      "selection_threshold": 0.2523912681608309,
+      "selected_rows": 132,
+      "train_signal_end": "2024-12-25T00:00:00",
+      "train_label_end": "2024-12-31T00:00:00",
+      "no_signal_date_leakage": true,
+      "no_label_availability_leakage": true
+    }
+  ],
+  "oos_auc": 0.5469252201664683,
+  "prediction_key_duplicates": 0,
+  "all_folds_no_signal_date_leakage": true,
+  "all_folds_no_label_availability_leakage": true,
+  "selected_signal_rows": 1178,
+  "recomputed_cumulative_return": 0.3579305192171971,
+  "cumulative_return_matches_summary": true,
+  "recomputed_realized_trade_win_rate": 0.32786885245901637,
+  "win_rate_matches_summary": true,
+  "industry_cap_respected": true,
+  "expected_report_metrics": {
+    "strategy_annualized_return": {
+      "expected": 0.15019528579175723,
+      "actual": 0.15019528579175723,
+      "match": true
+    },
+    "strategy_cumulative_return": {
+      "expected": 0.3579305192171971,
+      "actual": 0.3579305192171971,
+      "match": true
+    },
+    "strategy_sharpe": {
+      "expected": 0.7135623886480632,
+      "actual": 0.7135623886480632,
+      "match": true
+    },
+    "strategy_max_drawdown": {
+      "expected": -0.21477697945738672,
+      "actual": -0.21477697945738672,
+      "match": true
+    },
+    "realized_trade_win_rate": {
+      "expected": 0.32786885245901637,
+      "actual": 0.32786885245901637,
+      "match": true
+    },
+    "entry_trades": {
+      "expected": 254,
+      "actual": 254,
+      "match": true
+    },
+    "all_expected_metrics_match": true
+  },
+  "all_checks_pass": true
+}
