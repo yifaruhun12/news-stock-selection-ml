@@ -2,9 +2,9 @@
 
 ## Download the Complete Runnable Package
 
-[Download the full project ZIP](https://github.com/yifaruhun12/news-stock-selection-ml/releases/download/v1.0.0/News_Stock_Selection_English_Guide.zip) from [Releases](https://github.com/yifaruhun12/news-stock-selection-ml/releases/tag/v1.0.0). It contains the source code, historical data, and reference results. Extract the ZIP and follow the commands below from the extracted project folder.
+[Download the full project ZIP](https://github.com/yifaruhun12/news-stock-selection-ml/raw/refs/heads/main/News_Stock_Selection_English_Guide.zip) from this repository. It contains the source code, historical data, and reference results. Extract the ZIP and follow the commands below from the extracted project folder.
 
-This repository presents the source code, English documentation, and compact result tables for browsing. The large market-data CSV files are supplied in the release ZIP.
+This repository presents the source code, English documentation, and compact result tables for browsing. The large market-data CSV files are supplied in the complete project ZIP linked above.
 
 This package reproduces the two strategies in the final research report using the included local data snapshots. The machine learning strategy uses 56 features, L2-regularized logistic regression, annual expanding-window walk-forward validation, and a 30% industry weight cap on new entries.
 
